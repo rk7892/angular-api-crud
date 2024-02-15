@@ -1,16 +1,18 @@
 <div class="p-3">
   <!-- <input class="mt-5" placeholder="search here" type="search"> -->
   <!-- <input class="mt-5" placeholder="search here" type="search" [(ngModel)]="filterBy" (input)="filterBy()"> -->
-  <div class="pb-3">
+  <div class="pb-3 col-2">
     <input type="search" class="form-control" placeholder="search by Name" (input)="searchName($event)" />
-</div>
-<div class="pb-3">
+  </div>
+  <div class="pb-3 col-2">
     <input type="search" class="form-control" placeholder="search by Phone Number" (input)="searchPhone($event)" />
-</div>
-<div class="pb-3">
+  </div>
+  <div class="pb-3 col-2">
     <input type="search" class="form-control" placeholder="search by Designation" (input)="searchDesignation($event)" />
-</div>
-  <table class="table table-responsive">
+  </div>
+  <button class="me-3" (click)="sortListAsce()">Sort by ascending</button>
+  <button (click)="sortListDesc()">Sort by descenting</button>
+  <table class="table table-responsive" >
     <thead>
       <tr>
         <th>name</th>

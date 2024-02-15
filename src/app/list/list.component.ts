@@ -59,4 +59,35 @@ export class ListComponent {
   searchDesignation(event: Event) {
     this.searchByProperty(event, 'website');
   }
+
+  // // global search
+
+  // searchGlobally(event: Event) {
+  //   const searchText = (event.target as HTMLInputElement).value.toLowerCase();
+  //   if (!searchText) {
+  //     this.getUserList();
+  //   } else {
+  //     this.getUserArray = this.filteredUsers.filter(user => {
+  //       for (let key in user) {
+  //         if (user.hasOwnProperty(key) && typeof user[key] === 'string') {
+  //           if (user[key].toLowerCase().includes(searchText)) {
+  //             return true;
+  //           }
+  //         }
+  //       }
+  //       return false;
+  //     });
+  //   }
+  // }
+  
+
+  // sorting method
+  sortListAsce(){
+    this.getUserArray = this.getUserArray.sort((a, b) => a.name.localeCompare(b.name));
+    // this.getUserArray = this.getUserArray.sort((a, z) => a.name - z.name);
+  }
+
+  sortListDesc(){
+    this.getUserArray = this.getUserArray.sort((a, b) => b.name.localeCompare(a.name));
+  }
 }
