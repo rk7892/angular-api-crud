@@ -90,4 +90,14 @@ export class ListComponent {
   sortListDesc(){
     this.getUserArray = this.getUserArray.sort((a, b) => b.name.localeCompare(a.name));
   }
+
+  // Filter method
+
+  // filterList(nameInput: HTMLInputElement) {
+  //   if (nameInput.value) {
+  //     this.getUserArray = this.getUserArray.filter(p => p.name === nameInput.value)
+  //   }
+  // }
+
+  
 }
