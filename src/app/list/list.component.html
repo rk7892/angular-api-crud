@@ -1,0 +1,28 @@
+<div class="p-3">
+  <!-- <input class="mt-5" placeholder="search here" type="search"> -->
+  <input class="mt-5" placeholder="search here" type="search" [(ngModel)]="searchText" (input)="searchPhone($event)">
+  <table class="table table-responsive">
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>username</th>
+        <th>email</th>
+        <th>phone</th>
+        <th>website</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let list of getUserArray">
+        <td>{{list.name}}</td>
+        <td>{{list.username}}</td>
+        <td>{{list.email}}</td>
+        <td>{{list.phone}}</td>
+        <td>{{list.website}}</td>
+        <td>
+          <button>Edit</button> | <button>Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
