@@ -13,6 +13,7 @@ import { CustomerService } from '../service/customer.service';
 export class CreateComponent {
   service = inject(CustomerService)
   createFormGroup: FormGroup;
+result: any;
   constructor(private formbuilder: FormBuilder,){
     this.createFormGroup = this.formbuilder.group({
       id: ['0'],

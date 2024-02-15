@@ -27,8 +27,6 @@ export class ListComponent {
       this.getUserArray = result;
       console.log(result);
       console.log(this.getUserArray);
-      
-      
     })
   }
 
