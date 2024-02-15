@@ -1,5 +1,15 @@
 <div class="p-3">
-  <input class="mt-5" placeholder="search here" type="search">
+  <!-- <input class="mt-5" placeholder="search here" type="search"> -->
+  <!-- <input class="mt-5" placeholder="search here" type="search" [(ngModel)]="filterBy" (input)="filterBy()"> -->
+  <div class="pb-3">
+    <input type="search" class="form-control" placeholder="search by Name" (input)="searchName($event)" />
+</div>
+<div class="pb-3">
+    <input type="search" class="form-control" placeholder="search by Phone Number" (input)="searchPhone($event)" />
+</div>
+<div class="pb-3">
+    <input type="search" class="form-control" placeholder="search by Designation" (input)="searchDesignation($event)" />
+</div>
   <table class="table table-responsive">
     <thead>
       <tr>
